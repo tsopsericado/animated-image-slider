@@ -53,7 +53,7 @@
   }
 }
 
-.container .slide-container .slide .content p {
+.container .slide-container .slide .content h3 {
   font-size: 35px;
   color: #333;
 }
@@ -78,10 +78,10 @@
 }
 
 .container .slide-container {
-  /* display: none; */
+  display: none;
 }
 
-.container .slide-container .active {
+.container .slide-container.active {
   display: block;
 }
 
@@ -121,8 +121,8 @@
   font-weight: bolder;
 }
 
-.container #prev,
-.container #next {
+.container #prev:hover,
+.container #next:hover {
   background: #666;
 }
 
@@ -137,11 +137,11 @@
 @media (max-width: 500px) {
   .container #prev {
     left: 0px;
-		top: 60%;
+    top: 60%;
   }
 
   .container #next {
     right: 0px;
-		top: 60%;
+    top: 60%;
   }
 }
