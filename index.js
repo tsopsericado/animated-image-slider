@@ -4,9 +4,9 @@ let nextbtn = document.getElementById("next")
 let prevbtn = document.getElementById("prev")
 
 
-//next function 
+//function to move the images forward 
+
 function next(){
-    // console.log("1");
     slides[index].classList.remove('active');
     index = (index + 1) % slides.length;
     slides[index].classList.add('active'); 
@@ -14,9 +14,9 @@ function next(){
 
 nextbtn.addEventListener("click", next);
 
-//previous function 
+//function to move the images backward 
+
 function prev(){
-    // console.log("-1");
     slides[index].classList.remove('active');
     index = (index - 1 + slides.length) % slides.length;
     slides[index].classList.add('active'); 
@@ -25,6 +25,6 @@ function prev(){
 prevbtn.addEventListener("click", prev);
 
 
-//autoplay
+// automatic play function 
 
 setInterval(next, 4000);
