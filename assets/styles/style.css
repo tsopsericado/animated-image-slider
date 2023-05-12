@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Outfit:wght@500&display=swap");
+
+* {
+  font-family: Nunito, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.container {
+  position: relative;
+}
+
+.container .slide-container .slide {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px 9%;
+  padding-bottom: 70px;
+}
+
+.container .slide-container .slide .content {
+  flex: 1 1 350px;
+  animation: slide-content 0.4s linear 0.6s backwards;
+}
+
+@keyframes slide-content {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+.container .slide-container .slide .image {
+  flex: 1 1 500px;
+}
+
+.container .slide-container .slide .image img {
+  width: 100%;
+  animation: slide-image 0.4s linear 0.6s;
+}
+
+@keyframes slide-image {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+.container .slide-container .slide .content h3 {
+  font-size: 35px;
+  color: #333;
+}
+
+.container .slide-container .slide .content p {
+  font-size: 16px;
+  color: #666;
+  padding: 10px 0;
+}
+
+.container .slide-container .slide .content .btn {
+  margin-top: 10px;
+  display: inline-block;
+  background: #666;
+  color: #fff;
+  font-size: 17px;
+  padding: 9px 40px;
+}
+
+.container .slide-container .slide .content .btn:hover {
+  background: #333;
+}
+
+.container .slide-container {
+  display: none;
+}
+
+.container .slide-container.active {
+  display: block;
+}
+
+.container .slide-container:nth-child(1) .slide {
+  background: linear-gradient(90deg, #f9f9f9 70%, #ff9 30.1%);
+}
+
+.container .slide-container:nth-child(2) .slide {
+  background: linear-gradient(90deg, #f9f9f9 70%, #ff9090 30.1%);
+}
+
+.container .slide-container:nth-child(3) .slide {
+  background: linear-gradient(90deg, #f9f9f9 70%, #52ffd9 30.1%);
+}
+
+.container .slide-container:nth-child(4) .slide {
+  background: linear-gradient(90deg, #f9f9f9 70%, #d319b4 30.1%);
+}
+
+.container .slide-container:nth-child(5) .slide {
+  background: linear-gradient(90deg, #f9f9f9 70%, #c65b25 30.1%);
+}
+
+.container #prev,
+.container #next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  background: #333;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.container #prev {
+  left: 20px;
+}
+
+.container #next {
+  right: 20px;
+}
+
+.container #prev:hover,
+.container #next:hover {
+  background: #666;
+}
+
+@media (max-width: 500px) {
+  .container #prev {
+    left: 1px;
+    top: 60%;
+  }
+
+  .container #next {
+    right: 1px;
+    top: 60%;
+  }
+}
